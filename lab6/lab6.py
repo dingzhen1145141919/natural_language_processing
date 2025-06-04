@@ -39,7 +39,7 @@ def build_full_index(article_dir, stopwords):
     full_winner_lists = {}
     for term, docs in inverted_index.items():
 
-        # ✅ 使用堆排序选出 TF 最高的前 r 个文档
+        # 使用堆排序选出 TF 最高的前 r 个文档
         heap = []
         for doc_id, score in docs:
             if len(heap) < r:
